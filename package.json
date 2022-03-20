@@ -23,7 +23,7 @@
   "scripts": {
     "webpack": "time webpack --mode=production ./sample.js",
     "rollup": "time rollup -c",
-    "parcel": "rm -r .parcel-cache && time parcel build sample.js --dist-dir=dist/parcel",
+    "parcel": "rm -rf .parcel-cache && time parcel build sample.js --dist-dir=dist/parcel",
     "esbuild": "time esbuild sample.js --bundle --minify --outfile=dist/esbuild/main.js",
     "spack": "time spack"
   }

@@ -7,6 +7,8 @@
     "three.js": "^0.77.1"
   },
   "devDependencies": {
+    "@parcel/config-default": "^2.3.2",
+    "@parcel/core": "^2.3.2",
     "@parcel/optimizer-esbuild": "^2.3.2",
     "@rollup/plugin-commonjs": "^21.0.2",
     "@rollup/plugin-node-resolve": "^13.1.3",

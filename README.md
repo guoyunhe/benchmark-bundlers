@@ -27,9 +27,9 @@ Benchmark results:
 
 1. esbuild: 0.249s (with esbuild minifier)
 2. spack: 1.082s (with swc minifier)
-3. parcel: 18.269s (with esbuild minifier)
-4. webpack: 24.855s (with esbuild minifier)
-5. rollup: 28.606s (with esbuild minifier)
+3. webpack: 5.347s (with esbuild minifier)
+4. parcel: 6.069s (with esbuild minifier)
+5. rollup: 14.548s (with esbuild minifier)
 
 ### MacBook Pro 16 (2019)
 

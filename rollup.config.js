@@ -1,6 +1,6 @@
 import resolve from "@rollup/plugin-node-resolve";
 import commonjs from "@rollup/plugin-commonjs";
-import { terser } from "rollup-plugin-terser";
+import esbuild from "rollup-plugin-esbuild";
 
 export default {
   input: "sample.js",
@@ -8,5 +8,5 @@ export default {
     file: "dist/rollup/main.js",
     format: "iife",
   },
-  plugins: [resolve(), commonjs(), terser()],
+  plugins: [resolve(), commonjs(), esbuild({ minify: true })],
 };

@@ -9,8 +9,8 @@ antd + lodash + react + react-dom + three.js
 ## Output Standard
 
 - Bundled into one JS file
-- IIFE format
-- Minified without source maps
+- IIFE format output
+- Minified without source maps, use esbuild as minifier except for spack
 
 ## Test Devices
 
@@ -25,11 +25,11 @@ System information:
 
 Benchmark results:
 
-1. esbuild: 0.249s (with esbuild compiler)
-2. spack: 1.082s (with swc compiler)
-3. parcel: 18.269s (with swc compiler)
-4. webpack: 24.855s
-5. rollup: 28.606s
+1. esbuild: 0.249s (with esbuild minifier)
+2. spack: 1.082s (with swc minifier)
+3. parcel: 18.269s (with esbuild minifier)
+4. webpack: 24.855s (with esbuild minifier)
+5. rollup: 28.606s (with esbuild minifier)
 
 ### MacBook Pro 16 (2019)
 
@@ -42,31 +42,12 @@ System information:
 
 Benchmark results:
 
-1. esbuild: 0.227s (with esbuild compiler)
-2. spack: 1.012s (with swc compiler)
-3. parcel: 13.784s (with swc compiler)
-4. webpack: 16.897s
-5. rollup: 20.729s
+1. esbuild: 0.227s (with esbuild minifier)
+2. spack: 1.012s (with swc minifier)
+3. webpack: 4.229s (with esbuild minifier)
+4. parcel: 5.225s (with esbuild minifier)
+5. rollup: 12.790s (with esbuild minifier)
 
-## Conclusion
+## Summary
 
-> Only based on my test, may be not true for your real-world projects
-
-esbuild just goes beyond our imagination. It is 74~100 times faster than webpack
-and does more code transpiling work. In performance perspective, esbuild has no
-rival. esbuild is written in Go language and compiled into native binary, which
-explains the out-standing performance compared to tools written in JS.
-
-spack, or swcpack, though not as fast as esbuild, still left all other tools far
-behind. Similar to esbuild, it is written in Rust and compiled into native binary.
-Unlike esbuild, spack is still experimental. We expect the stable version will be
-even faster.
-
-parcel v2 does the best among traditional bundlers written in JS. We have many
-reasons to recommended parcel. However, bundling speed isn't its strongest point.
-Does 20~30% speed over webpack v5 worth the effort to adopt a totally different
-eco-system? Probably not.
-
-rollup, in our test, looks slower than webpack. This might be caused by the limited
-numbers of plugins and loaders. In real-world projects with tens of plugins, the
-advantage of rollup may eventually show up.
+Only based on my test, may be not true for your real-world projects.

@@ -1,6 +1,7 @@
 const { config } = require("@swc/core/spack");
 
 module.exports = config({
+  mode: "production",
   entry: {
     web: __dirname + "/sample.js",
   },
